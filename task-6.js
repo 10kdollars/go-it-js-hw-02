@@ -1,9 +1,13 @@
 const numbers = [];
 let total = 0;
-let input = prompt("Введи число!");
+let input;
 
 do {
-  let input = prompt("Введи число!");
+  input = prompt("Введи число!");
   numbers.push(input);
-  console.log(numbers);
-} while (input == Number);
+} while (input !== null);
+
+for (const num of numbers) {
+  total += Number(num);
+}
+alert(`Общая сумма чисел равна ${total}`);
